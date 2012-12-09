@@ -1,12 +1,11 @@
 source 'https://rubygems.org'
 
+ruby '1.9.3'
 gem 'rails', '3.2.8'
-
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-gem 'sqlite3'
-
+gem 'pg', :platforms => :ruby
+gem 'activerecord-jdbcpostgresql-adapter', :platforms => :jruby
+gem 'unicorn', :platforms => :ruby
+gem 'newrelic_rpm', :platforms => :ruby
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -22,17 +21,28 @@ end
 
 gem 'jquery-rails'
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+group :development, :test do
+  gem 'activerecord-jdbcsqlite3-adapter', :platforms => :jruby
+  gem 'sqlite3', :platforms => :ruby
+  gem 'rspec-rails', '~> 2.0'
+end
 
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
+group :development do
+  gem 'foreman'
+  gem 'nifty-generators'
+  gem 'rails-erd'
+  gem 'guard'
+  gem 'guard-rspec'
+  gem 'guard-cucumber'
+end
 
-# Use unicorn as the app server
-# gem 'unicorn'
+group :test do
+  gem 'mocha', :require => false
+  gem 'factory_girl_rails', '~> 4.0'
+  gem 'cucumber-rails', :require => false
+  gem 'database_cleaner'
+  gem 'capybara'
+  gem 'simplecov', :require => false
+  gem 'simplecov-rcov', :require => false
+end
 
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'
