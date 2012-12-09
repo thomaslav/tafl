@@ -1,0 +1,62 @@
+# Eclipse
+*.pydevproject
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+.elc
+auto-save-list
+tramp
+# IntelliJ Idea
+*.iml
+*.ipr
+*.iws
+.idea/
+# NetBeans
+nbproject/
+# Vim
+.*.sw[a-z]
+*.un~
+Session.vim
+# Windows
+Thumbs.db
+Desktop.ini
+# Rails
+*.rbc
+*.sassc
+.sass-cache
+capybara-*.html
+.rspec
+/.bundle
+/vendor/bundle
+/log/*
+/tmp/*
+/db/*.sqlite3*
+/public/system/*
+/coverage/
+/spec/tmp/*
+**.orig
+config/*.yml
+!config/newrelic.yml
+rerun.txt
+pickle-email-*.html
+/doc/app/
+# IntelliJ Idea / Rubymine
+.generators
+.rakeTasks
+# Assets
+/public/assets/*
